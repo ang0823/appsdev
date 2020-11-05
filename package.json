@@ -7,13 +7,19 @@
         "watch-poll": "npm run watch -- --watch-poll",
         "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --disable-host-check --config=node_modules/laravel-mix/setup/webpack.config.js",
         "prod": "npm run production",
-        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --config=node_modules/laravel-mix/setup/webpack.config.js"
+        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "lint": "jshint --reporter node_modules/jshint-html-reporter/reporter.js src > ST-report.html",,
+        "test-report": "mocha ./tests --reporter mocha-simple-html-reporter --reporter-options output=UT-report.html"
     },
     "devDependencies": {
         "axios": "^0.19",
         "cross-env": "^7.0",
         "laravel-mix": "^5.0.1",
         "lodash": "^4.17.19",
-        "resolve-url-loader": "^3.1.0"
+        "resolve-url-loader": "^3.1.0",
+        "jshint": "^2.10.3",
+        "jshint-html-reporter": "^0.2.5",
+        "mocha": "^8.2.1",
+        "mocha-simple-html-reporter": "^1.1.0"
     }
 }
