@@ -4,15 +4,16 @@ namespace Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
 
-class ExampleTest extends TestCase
+class UnitTest extends TestCase
 {
     /**
-     * A basic test example.
+     * Ejemplo de prueba unitaria
      *
      * @return void
      */
-    public function testBasicTest()
+    public function testUnitTest()
     {
-        $this->assertTrue(true);
+        $statusCode = 200;
+        $this->assertTrue(200 == $statusCode, 'El status code es 200');
     }
 }
